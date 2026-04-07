@@ -1,0 +1,21 @@
+Overall Accuracy: 1.0000 (100.00%)
+
+Per-class Accuracy:
+  crack     : 1.0000  (600/600)
+  hole      : 1.0000  (600/600)
+  normal    : 1.0000  (600/600)
+  rust      : 1.0000  (600/600)
+  scratch   : 1.0000  (600/600)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       crack       1.00      1.00      1.00       600
+        hole       1.00      1.00      1.00       600
+      normal       1.00      1.00      1.00       600
+        rust       1.00      1.00      1.00       600
+     scratch       1.00      1.00      1.00       600
+
+    accuracy                           1.00      3000
+   macro avg       1.00      1.00      1.00      3000
+weighted avg       1.00      1.00      1.00      3000
