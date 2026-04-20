@@ -1,0 +1,7 @@
+model,epochs,train_time_sec,val_loss,val_acc
+mobilenet_v2,1,90.54,0.008865,0.997
+mobilenet_v2,3,193.04,9.5e-05,1.0
+mobilenet_v2,5,317.26,6.3e-05,1.0
+mobilenet_v3_small,1,48.98,0.130744,0.970667
+mobilenet_v3_small,3,129.41,0.000113,1.0
+mobilenet_v3_small,5,209.06,6.1e-05,1.0

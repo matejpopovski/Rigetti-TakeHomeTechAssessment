@@ -1,0 +1,20 @@
+Benchmark Conclusion
+
+mobilenet_v2:
+  - 1 epoch(s): time=90.54s, val_loss=0.008865, val_acc=0.9970
+  - 3 epoch(s): time=193.04s, val_loss=0.000095, val_acc=1.0000
+  - 5 epoch(s): time=317.26s, val_loss=0.000063, val_acc=1.0000
+
+mobilenet_v3_small:
+  - 1 epoch(s): time=48.98s, val_loss=0.130744, val_acc=0.9707
+  - 3 epoch(s): time=129.41s, val_loss=0.000113, val_acc=1.0000
+  - 5 epoch(s): time=209.06s, val_loss=0.000061, val_acc=1.0000
+
+Summary:
+  Best validation accuracy: mobilenet_v2 at 3 epoch(s) with val_acc=1.0000
+  Fastest run: mobilenet_v3_small at 1 epoch(s) with train_time=48.98s
+
+Interpretation:
+  Since this is a synthetic defect dataset and both models are pretrained, it is expected that both MobileNet variants 
+  reach high validation accuracy quickly. If the accuracy difference is very small, the preferred model is usually the 
+  one with the lower training time and simpler deployment profile.
