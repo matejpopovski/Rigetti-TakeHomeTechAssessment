@@ -122,3 +122,15 @@ The model reaches 100% test accuracy by epoch 2 and remains there. Five epochs w
 - Class labels are inferred from subdirectory names — no manual label mapping needed.
 - All images are 256x256 RGB PNGs, resized to 224x224 for MobileNetV2.
 - `metadata.csv` fields (texture type, lighting angle, noise strength, etc.) are not used as model inputs. The visual signal alone is sufficient for this task. Metadata could be fused as auxiliary features in a more complex model, but adds unnecessary complexity for a baseline pipeline.
+
+## After Deadline
+
+After submitting the initial solution, I spent additional time exploring and extending the image classification pipeline.
+
+First, I implemented a benchmarking script to compare **MobileNetV2** and **MobileNetV3-Small** across multiple training durations (1, 3, and 5 epochs). This allowed for a direct evaluation of the trade-offs between training time and performance. The results showed that while both models quickly achieved near-perfect accuracy on this synthetic dataset, **MobileNetV3-Small was consistently faster**, whereas **MobileNetV2 demonstrated slightly stronger performance in the earliest training stage**.
+
+In addition, I implemented a **custom convolutional neural network (CNN) trained from scratch**, without using pretrained weights. This model served as a baseline to better understand the impact of transfer learning. Although the scratch model achieved strong performance (~98–99% accuracy), it required more training to converge and did not fully match the efficiency of the pretrained MobileNet models.
+
+### Conclusion
+
+These experiments highlight the advantage of transfer learning for this task. While a simple CNN trained from scratch is capable of learning the dataset effectively, pretrained architectures such as MobileNet provide **faster convergence and slightly better overall performance**. Given the minimal difference in final accuracy between MobileNet variants, the choice between them can be guided primarily by **training efficiency and deployment constraints**.
