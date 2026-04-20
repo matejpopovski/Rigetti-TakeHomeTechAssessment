@@ -1,0 +1,13 @@
+SimpleCNN Training Summary
+============================================================
+Epoch  1: train_loss=0.7913, train_acc=0.7041, test_loss=0.1875, test_acc=0.9473, time=42.89s
+Epoch  2: train_loss=0.1526, train_acc=0.9550, test_loss=0.0691, test_acc=0.9800, time=40.41s
+Epoch  3: train_loss=0.0726, train_acc=0.9791, test_loss=0.0415, test_acc=0.9883, time=41.70s
+Epoch  4: train_loss=0.0535, train_acc=0.9853, test_loss=0.0296, test_acc=0.9887, time=40.75s
+Epoch  5: train_loss=0.0417, train_acc=0.9872, test_loss=0.0697, test_acc=0.9760, time=41.02s
+
+Best Epoch:
+  Epoch 4 with test_acc=0.9887
+
+Interpretation:
+  The SimpleCNN trained from scratch achieves strong performance, but does not fully match pretrained MobileNet models. This suggests that transfer learning provides a performance advantage, especially in early training stages.
